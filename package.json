@@ -11,7 +11,11 @@
     "url": "https://github.com/prebid/Prebid.js.git"
   },
   "globalVarName": "pbjs",
-  "analytics": [],
+  "analytics": [
+    {
+      "ga": "src/adapters/analytics/ga.js"
+    }
+  ],
   "author": "the prebid.js contributors",
   "license": "Apache-2.0",
   "devDependencies": {
