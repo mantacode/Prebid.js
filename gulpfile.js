@@ -19,6 +19,7 @@ var jscs = require('gulp-jscs');
 var header = require('gulp-header');
 var zip = require('gulp-zip');
 var replace = require('gulp-replace');
+var spawn = require('child_process').spawn;
 
 var CI_MODE = process.env.NODE_ENV === 'ci';
 var prebid = require('./package.json');
@@ -184,4 +185,12 @@ gulp.task('docs', ['clean-docs'], function () {
       gutil.log('jsdoc2md failed:', err.message);
     })
     .pipe(gulp.dest('docs'));
+});
+
+gulp.task('update', function(cb) {
+  var proc = spawn('gulp', ['build', '--adapters', 'manta-adapters.json'], { stdio: 'inherit' });
+  proc.on('close', function() {
+    gulp.src('build/dist/prebid.js').pipe(gulp.dest('../manta-frontend/client/js', { overwrite: true }));
+    cb();
+  });
 });
