@@ -29,6 +29,7 @@
   "objectType_number": "number",
   "EVENTS": {
     "AUCTION_INIT": "auctionInit",
+    "AUCTION_END": "auctionEnd",
     "BID_ADJUSTMENT": "bidAdjustment",
     "BID_TIMEOUT": "bidTimeout",
     "BID_REQUESTED": "bidRequested",
@@ -38,12 +39,16 @@
   "EVENT_ID_PATHS": {
     "bidWon": "adUnitCode"
   },
+  "ORDER": {
+    "RANDOM": "random"
+  },
   "GRANULARITY_OPTIONS": {
     "LOW": "low",
     "MEDIUM": "medium",
     "HIGH": "high",
     "AUTO": "auto",
-    "DENSE": "dense"
+    "DENSE": "dense",
+    "CUSTOM": "custom"
   },
   "TARGETING_KEYS": [
     "hb_bidder",

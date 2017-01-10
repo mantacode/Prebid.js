@@ -1,17 +1,31 @@
 [
     "aardvark",
+    "adblade",
+    "adbutler",
     "adequant",
     "adform",
+    "adkernel",
     "admedia",
     "aol",
     "appnexus",
+    "appnexusAst",
+    "conversant",
+    "districtmDMX",
+    "fidelity",
+    "getintent",
+    "gumgum",
+    "hiromedia",
     "indexExchange",
     "kruxlink",
+    "komoona",
     "openx",
+    "piximedia",
     "pubmatic",
     "pulsepoint",
+    "rhythmone",
     "rubicon",
-    "sekindo",
+	  "smartadserver",
+    "sekindoUM",
     "sonobi",
     "sovrn",
     "springserve",
@@ -21,6 +35,12 @@
     "brightcom",
     "wideorbit",
     "jcm",
+    "underdogmedia",
+    "memeglobal",
+    "centro",
+    "roxot",
+    "vertoz",
+    "widespace",
     {
       "appnexus": {
         "alias": "brealtime"
@@ -30,5 +50,31 @@
       "appnexus": {
         "alias": "pagescience"
       }
+    },
+    {
+      "appnexus": {
+        "alias": "defymedia"
+      }
+    },
+    {
+      "appnexusAst": {
+        "supportedMediaTypes": ["video"]
+      }
+    },
+    {
+      "rubicon": {
+        "alias": "rubiconLite"
+      }
+    },
+    {
+      "appnexus": {
+        "alias": "featureforward"
+      }
+    },
+    {
+      "adkernel": {
+        "alias": "headbidding"
+      }
     }
+
 ]

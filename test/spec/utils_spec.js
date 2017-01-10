@@ -36,13 +36,13 @@ describe('Utils', function () {
     });
   });
 
-  describe('getBidIdParamater', function () {
+  describe('getBidIdParameter', function () {
     it('should return value of the key in input object', function () {
       var obj = {
         a: 'valueA',
         b: 'valueB'
       };
-      var output = utils.getBidIdParamater('a', obj);
+      var output = utils.getBidIdParameter('a', obj);
       assert.equal(output, 'valueA');
     });
 
@@ -51,7 +51,7 @@ describe('Utils', function () {
         a: 'valueA',
         b: 'valueB'
       };
-      var output = utils.getBidIdParamater('c', obj);
+      var output = utils.getBidIdParameter('c', obj);
       assert.equal(output, '');
     });
   });
@@ -517,6 +517,17 @@ describe('Utils', function () {
         timeToRespond: 50
       };
       assert.equal(utils.getHighestCpm(previous, current), current);
+    });
+  });
+
+  describe('polyfill test', function () {
+    it('should not add polyfill to array', function() {
+      var arr = ['hello','world'];
+      var count = 0;
+      for(var key in arr) {
+        count++;
+      }
+      assert.equal(arr.length, count, "Polyfill test fails")
     });
   });
 
